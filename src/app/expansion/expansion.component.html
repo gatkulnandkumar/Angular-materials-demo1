@@ -1,0 +1,36 @@
+<p>expansion works!</p>
+
+<mat-accordion multi ="true">
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+        Java Programming language
+        </mat-panel-title>
+        <mat-panel-description>
+          Java is a widely used object-oriented programming language and software platform that runs on billions of devices.
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>This free Java course is designed to provide a solid foundation and work-ready skills in Java development. Gain hands-on experience in JDBC and JUnit frameworks along with the knowledge of Core Java 8 operators, arrays, loops, methods, and constructors. The program is ideal for anyone looking to learn the basics of Java and kickstart their career as a Java Developer.</p>
+      <mat-action-row>
+        <button mat-raised-button color="primary">Enroll</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          MongoDB Developer and Administrator
+        </mat-panel-title>
+        <mat-panel-description>
+          Currently I am {{panelOpenState ? 'open' : 'close'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>This MongoDB basics program offers work-ready training needed to handle large data and storage requirements. Learn how to work with the widely-used MongoDB, commonly known as a NoSQL database. Learn about query optimization, data replication, and how to install and update the database environment. This MongoDB basics program is ideal for anyone looking to become a MongoDB management professional.</p>
+      <mat-action-row>
+        <button mat-raised-button color="primary">Enroll</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+   
+  </mat-accordion>
+  

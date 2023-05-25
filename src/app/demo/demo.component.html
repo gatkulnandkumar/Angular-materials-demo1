@@ -1,0 +1,32 @@
+<!-- <p>demo works!</p> -->
+<div class="d-flex justify-content-center">
+    <mat-card>
+        <mat-card-header class="d-flex justify-content-center align-items-center">
+            <!-- <img src="path/to/your/logo.png" alt="Logo" class="logo"> -->
+            <mat-card-title>E-KYC</mat-card-title>
+        </mat-card-header>
+        <div class="row">
+            <mat-card-content class="d-flex justify-content-center align-items-center">
+                <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <mat-form-field appearance="outline">
+                            <mat-label>UNAME</mat-label>
+                            <input matInput placeholder="Enter UNAME " formControlName="uidai" id="uidai" >
+                            <mat-error *ngIf="myForm.controls['uidai'].invalid && (myForm.controls['uidai'].dirty || myForm.controls['uidai'].touched)">
+                              <span *ngIf="myForm.controls['uidai'].hasError('required')">UNAME is required</span>
+                              <span *ngIf="myForm.controls['uidai'].hasError('pattern')">UNAME must be a 8-digit number</span>
+                              <span *ngIf="uidaiControl.invalid && (uidaiControl.dirty || uidaiControl.touched)">Please enter a valid UIDAI number.</span>
+                            </mat-error>
+                          </mat-form-field>
+  
+                        <div></div>
+                     
+                        <div></div>
+  
+                        <button mat-raised-button color="accent">Submit</button>
+                    </div>
+                </form>
+            </mat-card-content>
+        </div>
+    </mat-card>
+  </div>

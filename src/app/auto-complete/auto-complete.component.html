@@ -1,0 +1,11 @@
+<p>auto-complete works!</p>
+<form>
+    <mat-form-field appearance="fill">
+        <input type = "text" matInput [matAutocomplete]="auto" [formControl] ="myControl"/>
+        <mat-autocomplete #auto="matAutocomplete" [displayWith] = "displayFn">
+            <mat-option *ngFor="let option of objectOptions" [value] = "option">
+                {{option.name}}
+            </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+</form>
